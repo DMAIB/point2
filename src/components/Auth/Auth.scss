@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+
+:root {
+    --background-color: #f2f2f2;
+    --container-bg-color: #ffffff;
+    --button-bg-color: #EA0C0C;
+    --button-hover-color: #d60f0f;
+    --input-bg-color: #f2f2f2;
+    --accent-color: #EA0C0C;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+  
+.auth-container {
+    width: 350px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 35px;
+    border-radius: 16px;
+    background-color: var(--container-bg-color);
+}
+  
+.auth-container h2 {
+    margin: 0;
+    font-weight: bold;
+    margin-top: 20px;
+}
+  
+.auth-container p {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+.error-message{
+    font-size: 12px;
+}
+ 
+.auth-container input {
+    height: 25px;
+    width: 94%;
+    padding: 10px;
+    margin: 7px 0;
+    border: 1px solid #f2f2f2;
+    border-radius: 8px;
+    background-color: var(--input-bg-color);
+}
+
+.auth-container img {
+    margin: 10px 0; /* Отступы для изображений */
+    max-width: 100%; /* Ограничиваем ширину изображений */
+    height: 16px; /* Сохраняем пропорции */
+    width: auto;
+    margin-right: 8px;
+}
+  
+.auth-container button,
+.social-buttons button {
+    display: flex; /* Flexbox для вертикального выравнивания */
+    justify-content: center; /* Центрируем текст по горизонтали */
+    align-items: center; /* Центрируем текст по вертикали */
+    height: 40px; /* Фиксированная высота кнопок */
+    font-weight: bold;
+    width: 100%;
+    padding: 12px;
+    font-size: 12px;
+    background-color: var(--button-bg-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: var(--button-hover-color);
+    }
+}
+  
+.auth-container label {
+    display: block;
+    margin: 10px 0;
+}
+  
+.social-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+
+    button {
+        width: 48%;
+    }
+}
+
+.social-buttons .facebook-button {
+    background-color: #2F80ED; /* Синий цвет Facebook */
+    color: white; /* Цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 8px; /* Закругляем углы */
+    padding: 12px; /* Отступы внутри кнопки */
+    cursor: pointer; /* Курсор при наведении */
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+
+    &:hover {
+        background-color: #2d4373; /* Темнее синий при наведении */
+    }
+}
+
+.register-link {
+    font-weight: bold;
+    color: #9D7B6D;
+}
+  
+.remember-me {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 13px;
+}
+
+.remember-me input {
+    margin-top: 5px;
+    width: auto;
+    margin-right: 8px;
+    accent-color: var(--accent-color);
+}
+
+
+
+.login-button {
+    display: flex;
+    justify-content: flex-start;
+
+    .login-submit-button {
+        font-size: 14px;
+        height: 53px; 
+        max-width: 95px; 
+        padding: 8px 16px; 
+        font-weight: bold; 
+        background-color: var(--button-bg-color); 
+        color: white; 
+        border: none; 
+        border-radius: 6px;
+        cursor: pointer; 
+        transition: background-color 0.3s ease, transform 0.2s ease; 
+        margin-top: 10px; 
+        text-align: center;
+
+        &:hover {
+            background-color: var(--button-hover-color);
+            transform: scale(1.05);
+        }
+    }
+}
+
+

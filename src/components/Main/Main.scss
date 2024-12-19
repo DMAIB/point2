@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+$card-background: white;
+$card-border: #ffffff;
+$card-shadow: rgba(0, 0, 0, 0.08); 
+$container-padding: 20px;
+$add-to-cart-color: white; // Цвет текста кнопки
+
+.main {
+    margin: 0;
+    padding: $container-padding;
+    font-family: "Rubik";
+    display: flex; 
+    justify-content: center; 
+    align-items: flex-start; 
+    min-height: 100vh; 
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 50px;
+        justify-content: center; 
+        margin-left: 310px; 
+        margin-right: 310px; 
+    }
+
+    .card {
+        background-color: $card-background;
+        border: 1px solid $card-border;
+        border-radius: 8px;
+        box-shadow: 0 8px 10px $card-shadow; 
+        margin: 4px;
+        margin-bottom: 13px;
+        padding: 25px;
+        width: calc(33.33% - 20px);
+        box-sizing: border-box;
+        transition: transform 0.3s ease, box-shadow 0.3s ease; 
+
+        &:hover {
+            transform: scale(1.01); 
+            box-shadow: 0 16px 20px $card-shadow; 
+        }
+
+        img {
+            max-width: auto;
+            height: 80px;
+            border-radius: 5px;
+        }
+
+        h3 {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        p {
+            margin: 5px 0;
+            font-size: 0.8em;
+        }
+        
+        .del {
+            margin: 8px 0;
+            font-size: 0.7em;
+        }
+        
+        .kom {
+            margin-top: -10px;
+            display: flex; // Используем Flexbox для выравнивания
+            justify-content: start; // Разделяем текст и кнопку по краям
+            align-items: center; // Вертикальное выравнивание по центру
+            font-size: 0.85em;
+        }
+        
+        // Обновления для кнопки добавления
+        .add-to-cart {
+            width: 30px; // Установите ширину кнопки
+            height: 30px; // Установите высоту кнопки
+            margin-left: 28px;
+            cursor: pointer; // Курсор в виде указателя при наведении
+            transition: transform 0.2s; // Плавный переход при наведении
+            
+            &:hover {
+                transform: scale(1.1); // Увеличение кнопки при наведении
+            }
+        }
+    }
+}
